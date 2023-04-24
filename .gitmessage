@@ -1,0 +1,48 @@
+##################################################
+# TEMPLATE #
+##################################################
+[Subject:]
+
+  [Body:]
+
+[References:]
+##################################################
+# EXAMPLE #
+#
+# Fix(middleware): ensure headers comply w/ RFC 2616
+#
+#   Adds one new dependency, now uses `range-parser`
+#   (Express dependency) to compute range. It's also
+#   more tested in the wild.
+#
+# Fixes (#513, #522)
+#
+##################################################
+# PARAMS #
+##################################################
+#
+# <Type>(<scope>): <summary>
+#
+# Type (required) must be one of the following:
+#
+# [Build, Chore, Docs, Feat, Fix, Perf, Refactor,
+# Style, Test, Update]
+#
+# Scope (optional) must be a lowercase noun.
+#
+# Summary (required) must lead with an imperative,
+# lowercase verb and have neither capitalization
+# nor punctuation.
+#
+#   <Body>
+#
+#   Body (optional) must be a detailed description
+#   of changes made and the rationale behind them,
+#   if needed. Use of multiple lines is permitted.
+#
+# <References>
+#
+# References (optional) must be brief and link to
+# any open issues the commit fixes and/or closes.
+#
+##################################################
