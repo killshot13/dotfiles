@@ -1,0 +1,10 @@
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' >> $HOME/.dotfiles-local-settings
+alias one='cd ~/'
+alias onedev='cd ~/'
+alias onedevrun='cd ~/ && code one.code-workspace'
+alias two='cd ~/'
+alias twodev='cd ~/'
+alias twodevrun='cd ~/ && code two.code-workspace'
+alias three='cd ~/'
+alias threedev='cd ~/'
+alias threedevrun='cd ~/ && code three.code-workspace'
