@@ -4,3 +4,5 @@
 !.env.vaultdotfiles/
 dotfiles/
 .dotfiles-local-settings
+dotfiles/
+.dotfiles-local-settings
