@@ -99,13 +99,11 @@ fi
 
 # source custom local bash aliases
 if [ -f "$HOME"/.dotfiles-local-settings ]; then
-  # shellcheck source=/home/sth13/.dotfiles-local-settings
   . "$HOME"/.dotfiles-local-settings
 fi
 
 # source custom bash functions
 if [ -f "$HOME"/.bash_functions ]; then
-  # shellcheck source=/home/sth13/.bash_functions
   . "$HOME"/.bash_functions
 fi
 
@@ -119,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 # Extends MANPATH to include local directories
-MANPATH=/usr/local/man/man1:"$MANPATH"
+MANPATH=/usr/local/man:"$MANPATH"
 export MANPATH
 
 # added by travis gem
@@ -129,7 +127,6 @@ export MANPATH
 [ ! -s "$HOME"/.stripe/stripe-completion.bash ] || source "$HOME"/.stripe/stripe-completion.bash
 
 # heroku autocomplete setup
-# shellcheck source=$HOME/.cache/heroku/autocomplete/bash_setup
 HEROKU_AC_BASH_SETUP_PATH=$HOME/.cache/heroku/autocomplete/bash_setup && test -f "$HEROKU_AC_BASH_SETUP_PATH" && source "$HEROKU_AC_BASH_SETUP_PATH"
 
 # make sure GOLANG binaries are added to PATH at the user level
@@ -266,7 +263,3 @@ cdnvm() {
 }
 alias cd=cdnvm
 cd "$PWD" || exit
-
-# bit
-export PATH="$PATH:/home/sth13/bin"
-# bit end
