@@ -129,21 +129,6 @@ export MANPATH
 # heroku autocomplete setup
 HEROKU_AC_BASH_SETUP_PATH=$HOME/.cache/heroku/autocomplete/bash_setup && test -f "$HEROKU_AC_BASH_SETUP_PATH" && source "$HEROKU_AC_BASH_SETUP_PATH"
 
-# make sure GOLANG binaries are added to PATH at the user level
-if [ -d "/usr/local/go/bin" ]; then
-  PATH="/usr/local/go/bin:$PATH"
-fi
-
-# insert global Snap binaries directly into PATH
-if [ -d "/snap/bin" ]; then
-  PATH="/snap/bin:$PATH"
-fi
-
-# insert global Composer binaries directly into PATH
-if [ -d "$HOME/.config/composer/vendor/bin" ]; then
-  PATH="$HOME/.config/composer/vendor/bin:$PATH"
-fi
-
 # make sure Bun binaries are added to PATH at the user level
 eval BUN_INSTALL="$HOME/.bun"
 if [ -d "$BUN_INSTALL/bin" ]; then

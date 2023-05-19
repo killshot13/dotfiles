@@ -1,0 +1,2 @@
+# Don't suggest file not found, no permissions, not included on the command line, not allowing shellcheck to follow files with -x, etc
+disable=SC1091

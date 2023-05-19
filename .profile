@@ -26,3 +26,9 @@ fi
 if [ -d "$HOME/.local/bin" ]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
+
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/snap/bin
+export PATH=$PATH:$HOME/.config/composer/vendor/bin
+export GOROOT=/usr/local/go
+export GOPATH=$HOME
