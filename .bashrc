@@ -116,6 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Exports user-level system binaries
+PATH="${HOME}/bin:${PATH}"
+export PATH
+
 # Extends MANPATH to include local directories
 MANPATH=/usr/local/man:"$MANPATH"
 export MANPATH
@@ -196,9 +200,15 @@ cb() {
 eval "$(keychain --eval id_rsa)"
 eval "$(keychain --eval id_ed25519)"
 
+# gpg-tty
 GPG_TTY=$(tty)
 export GPG_TTY
 
+# vuln-regex-detector
+VULN_REGEX_DETECTOR_ROOT="$HOME"/code/tools/vuln-regex-detector
+export VULN_REGEX_DETECTOR_ROOT
+
+# nvm 
 export NVM_COLORS="BMGRY"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
